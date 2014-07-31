@@ -1,3 +1,3 @@
-#### 0.0.0-beta - October 19 2013
+#### 0.0.0-beta - July 31 2014
 * Initial release
 

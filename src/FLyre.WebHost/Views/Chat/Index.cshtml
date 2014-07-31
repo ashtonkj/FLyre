@@ -1,0 +1,55 @@
+﻿@{
+    var testMessages = @"toyvo[|]you can do things like View.Do { let! x = someView; if ok x then .. else .. }
+Johan Larsson[|]@ReedCopsey I have started using it for many things, have a sweet extension method that filters it with and expression and turns it into an observable then rx away on it.
+toyvo[|]oh, Rx, the abomination :)
+Johan Larsson[|]Idea for the Var guy: what about having Independent<T> Dependent<T>?
+Reed Copsey[|]View<_> effectively becomes a dependent<T>, I believe
+toyvo[|]disclaimer - i don't like Rx maybe I'm just too stupid for it, but totally respect people who use it effectively :)
+Reed Copsey[|]Var<_> would be independent by its nature
+Johan Larsson[|]I mean like Firstname LastName FullName
+Reed Copsey[|]@JohanLarsson yeah - View combinators handle that, if I understand correctly
+toyvo[|]let FullName : View<string * string> = View.Map2 (fun fn ln -> (fn, ln)) FirstName.View LastName.View<br/>given FirstName : Var<string> and LastName : Var<string>";
+    var messages = testMessages.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(c => c.Split(new[] { "[|]" }, StringSplitOptions.RemoveEmptyEntries)).Select(c => new { Username = c[0], Message = c[1] });
+}
+
+<div class="page-content">
+    <div class="FLyre-Chat">
+        <div class="FLyre-Chat-Header">
+
+        </div>
+        <div class="FLyre-Chat-Main">
+            <div class="RoomBody">
+                @foreach (var msg in messages)
+                {
+                    <div class="Message">
+                        <div class="Message-Body">
+                            <div class="User">
+                                <div class="UserName">@msg.Username</div>
+                                <div class="Avatar"></div>
+                            </div>
+                            <div class="Content">
+                                @Html.Raw(msg.Message);
+                            </div>
+                        </div>
+
+                    </div>
+                }
+                
+            </div>
+            <div class="RoomUsers">
+
+            </div>
+        </div>
+        <div class="FLyre-Chat-Footer">
+            <div class="InnerContainer">
+                <div class="Avatar">
+
+                </div>
+                <div class="FLyre-Chat-TextInput">
+                    <textarea></textarea>
+                </div>
+                <button class="SendButton">SEND</button>
+            </div>
+        </div>
+    </div>
+</div>

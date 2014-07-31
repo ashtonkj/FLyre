@@ -1,12 +1,16 @@
-﻿
-var FLyre = angular
-  .module('FLyre', ['ngResource', 'ngRoute', 'ngAnimate'])
-  .config(function ($routeProvider) {
-    $routeProvider.when('/', {
-      templateUrl: '/Home/Home'//,
-      //controller: 'HomeController'
-    });
-  })
-  .run(function ($rootScope) {
-  });
+﻿module FLyre.Application {
+    var $rootScopePtr;
+    var $routeProviderPtr;
+
+    export var FLyre = angular
+      .module('FLyre', ['ngResource', 'ngRoute', 'ngAnimate'])
+      .config(function ($routeProvider) {
+        $routeProviderPtr = $routeProvider;
+
+      })
+      .run(function ($rootScope) {
+        RegisterRoutes($routeProviderPtr);
+      });
+}
+
 

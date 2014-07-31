@@ -1,7 +1,7 @@
 ﻿namespace System
 open System.Reflection
 
-[<assembly: AssemblyTitleAttribute("FLyre")>]
+[<assembly: AssemblyTitleAttribute("FLyre.WebCore")>]
 [<assembly: AssemblyProductAttribute("FLyre")>]
 [<assembly: AssemblyDescriptionAttribute("A chat prototype")>]
 [<assembly: AssemblyVersionAttribute("0.0.0")>]

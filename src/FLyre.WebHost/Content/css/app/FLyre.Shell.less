@@ -1,0 +1,157 @@
+﻿@import 'Shared';
+
+html {
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+.FLyre-Shell-Content {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+@-moz-keyframes slideOutLeft {
+    to {
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes slideOutLeft {
+    to {
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutLeft {
+    to {
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.page.ng-enter {
+    -moz-animation: slideInRight 0.2s both ease-in;
+    -o-animation: slideInRight 0.2s both ease-in;
+    -webkit-animation: slideInRight 0.2s both ease-in;
+    animation: slideInRight 0.2s both ease-in;
+    z-index: 8888;
+}
+
+.page.ng-leave {
+    -moz-animation: slideOutLeft 0.2s both ease-in;
+    -o-animation: slideOutLeft 0.2s both ease-in;
+    -webkit-animation: slideOutLeft 0.2s both ease-in;
+    animation: slideOutLeft 0.2s both ease-in;
+    z-index: 9999;
+}
+
+@-moz-keyframes slideInRight {
+    from {
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.page-content {
+    position: relative;
+    height: 100%;
+    top: 0;
+    background: @BackgroundColor;
+}
+
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.navbar ul li a {
+    padding-top: 20px;
+    padding-bottom: 18px;
+}
+
+.FLyre-Shell-Content > .container {
+    padding-right: 0;
+    padding-left: 0;
+}

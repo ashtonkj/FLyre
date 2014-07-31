@@ -1,0 +1,149 @@
+﻿@ChatBottomHeight: 80px;
+@ChatFooterBackground: #e0e0e0;
+@ChatHeaderBackground: #e0e0e0;
+@ChatMainBackground: white;
+@ChatBorderWidth: 1px;
+@ChatBorderColor: black;
+@ChatAvatarWidth: 64px;
+@ChatAvatarHeight: 64px;
+@ChatSmallAvatarWidth: 16px;
+@ChatSmallAvatarHeight: 16px;
+@ChatElementSpacing: 5px;
+
+.Avatar {
+    border: 1px solid black;
+}
+
+.FLyre-Chat {
+    height: 100%;
+    width: 100%;
+    border: @ChatBorderWidth solid @ChatBorderColor;
+    padding: @ChatBorderWidth;
+}
+
+.FLyre-Chat-Header {
+    height: 30px;
+    background-color: @ChatHeaderBackground;
+    position: absolute;
+    left: @ChatBorderWidth;
+    right: @ChatBorderWidth;
+}
+
+.FLyre-Chat-Footer {
+    position: absolute;
+    height: @ChatBottomHeight;
+    background-color: @ChatFooterBackground;
+    bottom: 0;
+    left: @ChatBorderWidth;
+    right: @ChatBorderWidth;
+}
+
+.FLyre-Chat-Main {
+    top: 30px;
+    bottom: @ChatBottomHeight;
+    left: @ChatBorderWidth;
+    right: @ChatBorderWidth;
+    background-color: @ChatMainBackground;
+    position: absolute;
+    overflow-y: auto;
+}
+
+.FLyre-Chat-Main .RoomBody {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 80%;
+    left: 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.FLyre-Chat-Main .RoomUsers {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 20%;
+    right: 0;
+    border: 1px solid black;
+    border-right: 0;
+}
+
+.FLyre-Chat-Footer > .InnerContainer {
+    position: absolute;
+    top: @ChatElementSpacing;
+    left: @ChatElementSpacing;
+    right: @ChatElementSpacing;
+}
+
+.FLyre-Chat-Footer > .InnerContainer > .FLyre-Chat-TextInput {
+    position: absolute;
+    left: @ChatAvatarWidth + @ChatElementSpacing;
+    right: @ChatAvatarWidth + @ChatElementSpacing;
+}
+
+.FLyre-Chat-TextInput > textarea {
+    width: 100%;
+    height: 64px;
+    margin: 0px;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 12px;
+    border: 1px solid #bdbdbd;
+    background-color: #fbf2d9;
+    color: #222222;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+    padding: 2px;
+}
+
+.FLyre-Chat-Footer > .InnerContainer > .Avatar {
+    position: absolute;
+    left:0;
+    height: @ChatAvatarHeight;
+    width: @ChatAvatarWidth;
+}
+
+.FLyre-Chat-Footer > .InnerContainer > .SendButton {
+    position: absolute;
+    height: @ChatAvatarHeight;
+    width: @ChatAvatarWidth;
+    border:0;
+    margin:0;
+    right:0;
+}
+
+.RoomBody .Message { 
+    margin: 5px 0;
+    float:left;
+    width: 100%;
+}
+
+.RoomBody .Message .Message-Body { 
+    float:left;
+    width: 100%;
+}
+
+.RoomBody .Message .Content {
+    float: left;
+    width: 87%;
+}
+
+.RoomBody .User {
+    float:left;
+    width: 10%;
+    text-align: right;
+    margin-right: 5px;
+    
+}
+
+.RoomBody .User .Avatar {
+    width: @ChatSmallAvatarWidth;
+    height: @ChatSmallAvatarHeight;
+    display: inline-block;
+}
+
+.RoomBody .User .UserName {
+    height: @ChatSmallAvatarHeight;
+    display: inline-block;
+}
+
