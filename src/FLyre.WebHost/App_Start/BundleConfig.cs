@@ -17,15 +17,18 @@ namespace FLyre.WebHost
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Scripts/lib/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/lib/bootstrap.js",
+                      "~/Scripts/lib/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new Bundle("~/bundles/AppMain")
+                .Include(new [] { "~/Scripts/app/FLyre.Routes.js", "~/Scripts/app/FLyre.js" }));
+
+            bundles.Add(new StyleBundle("~/Content/cssbase").Include(
                       "~/Content/css/lib/bootstrap.css",
-                      "~/Content/css/app/site.css"));
+                      "~/Content/css/app/Shell.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
