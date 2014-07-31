@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F1B4F0F-2998-4D74-865B-9122611C2B14}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -36,6 +37,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FLyre.Tests", "tests\FLyre.Tests\FLyre.Tests.fsproj", "{E789C72A-5CFD-436B-8EF1-61AA2852A89F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLyre.WebHost", "src\FLyre.WebHost\FLyre.WebHost.csproj", "{4879513E-D9A9-49CC-8E3F-385A5FD93B55}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FLyre.WebHost.Tests", "tests\FLyre.WebHost.Tests\FLyre.WebHost.Tests.fsproj", "{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{47688121-E667-463C-BD88-E8C6C98577B2}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FLyre.WebCore", "src\FLyre.WebCore\FLyre.WebCore.fsproj", "{F0A18127-2360-4832-866E-E7CDF8962B6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A49A978-D197-4787-A5D3-E24F3A0F0805}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{01AD9989-AD76-4E52-A138-65A6FF393B55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "markdown", "markdown", "{15A953C7-348C-4468-953B-77451C8346C8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "designdocuments", "designdocuments", "{DA04485E-0C9E-454A-B382-D4D86933C9EA}"
+	ProjectSection(SolutionItems) = preProject
+		docs\designdocuments\Readme.md = docs\designdocuments\Readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,13 +74,32 @@ Global
 		{E789C72A-5CFD-436B-8EF1-61AA2852A89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E789C72A-5CFD-436B-8EF1-61AA2852A89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E789C72A-5CFD-436B-8EF1-61AA2852A89F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4879513E-D9A9-49CC-8E3F-385A5FD93B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4879513E-D9A9-49CC-8E3F-385A5FD93B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4879513E-D9A9-49CC-8E3F-385A5FD93B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4879513E-D9A9-49CC-8E3F-385A5FD93B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A18127-2360-4832-866E-E7CDF8962B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A18127-2360-4832-866E-E7CDF8962B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A18127-2360-4832-866E-E7CDF8962B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A18127-2360-4832-866E-E7CDF8962B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{7E90D6CE-A10B-4858-A5BC-41DF7250CBCA} = {01AD9989-AD76-4E52-A138-65A6FF393B55}
 		{83F16175-43B1-4C90-A1EE-8E351C33435D} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
 		{8E6D5255-776D-4B61-85F9-73C37AA1FB9A} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
 		{E789C72A-5CFD-436B-8EF1-61AA2852A89F} = {ED8079DD-2B06-4030-9F0F-DC548F98E1C4}
+		{4879513E-D9A9-49CC-8E3F-385A5FD93B55} = {47688121-E667-463C-BD88-E8C6C98577B2}
+		{8762C5C7-D5C9-4B47-BA2B-0F47CEB96CC8} = {ED8079DD-2B06-4030-9F0F-DC548F98E1C4}
+		{47688121-E667-463C-BD88-E8C6C98577B2} = {8A49A978-D197-4787-A5D3-E24F3A0F0805}
+		{F0A18127-2360-4832-866E-E7CDF8962B6C} = {47688121-E667-463C-BD88-E8C6C98577B2}
+		{01AD9989-AD76-4E52-A138-65A6FF393B55} = {8A49A978-D197-4787-A5D3-E24F3A0F0805}
+		{DA04485E-0C9E-454A-B382-D4D86933C9EA} = {A6A6AF7D-D6E3-442D-9B1E-58CC91879BE1}
 	EndGlobalSection
 EndGlobal
