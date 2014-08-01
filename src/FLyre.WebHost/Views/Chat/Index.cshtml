@@ -15,7 +15,7 @@ toyvo[|]let FullName : View<string * string> = View.Map2 (fun fn ln -> (fn, ln))
 <div class="page-content">
     <div class="FLyre-Chat">
         <div class="FLyre-Chat-Header">
-
+            {{DataContext.RoomName}}
         </div>
         <div class="FLyre-Chat-Main">
             <div class="RoomBody">
@@ -36,9 +36,18 @@ toyvo[|]let FullName : View<string * string> = View.Map2 (fun fn ln -> (fn, ln))
                 }
                 
             </div>
-            <div class="RoomUsers">
+            <div class="RoomRight">
+                <div class="RoomUsers">
+                    <div class="RoomUser" ng-repeat="user in DataContext.Users">
+                        <div class="Avatar"></div>
+                        <div class="UserName">{{user.UserName}}</div>
+                    </div>
+                </div>
+                <div class="RoomNotices">
 
+                </div>
             </div>
+            
         </div>
         <div class="FLyre-Chat-Footer">
             <div class="InnerContainer">
@@ -46,10 +55,20 @@ toyvo[|]let FullName : View<string * string> = View.Map2 (fun fn ln -> (fn, ln))
 
                 </div>
                 <div class="FLyre-Chat-TextInput">
-                    <textarea></textarea>
+                    <textarea id="SendText"></textarea>
                 </div>
                 <button class="SendButton">SEND</button>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $( "#SendText" ).on( "keyup", function ( e ) {
+        e = e || event;
+        if ( e.keyCode === 13 && !e.ctrlKey ) {
+            // start your submit function
+            $(this).val("");
+        }
+        return true;
+    } );
+</script>

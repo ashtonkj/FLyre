@@ -9,6 +9,7 @@
 @ChatSmallAvatarWidth: 16px;
 @ChatSmallAvatarHeight: 16px;
 @ChatElementSpacing: 5px;
+@RoomRightVerticalSplitSize: 50%;
 
 .Avatar {
     border: 1px solid black;
@@ -48,25 +49,68 @@
     overflow-y: auto;
 }
 
-.FLyre-Chat-Main .RoomBody {
-    position: absolute;
-    top: 0;
-    bottom:0;
-    width: 80%;
-    left: 0;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+@media screen and (min-width: 768px) {
+    .FLyre-Chat-Main .RoomBody {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80%;
+        left: 0;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+    }
+
+    .FLyre-Chat-Main .RoomRight {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 20%;
+        right: 0;
+        border: 1px solid black;
+        border-right: 0;
+    }
+
+    .RoomRight .RoomUsers {
+        position: absolute;
+        top: 0;
+        bottom: 50%;
+        right: 0;
+        left: 0;
+        border: 1px solid black;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+    .RoomUsers .RoomUser .Avatar {
+        height: 16px;
+        width: 16px;
+        float: left;
+    }
+
+    .RoomUsers .RoomUser .UserName {
+        height: 16px;
+        margin-left: 5px;
+        float: left;
+        margin-top: -2px;
+    }
+
+    .RoomUsers .RoomUser {
+        float: left;
+        width: 100%;
+        margin: 2px;
+    }
+
+    .RoomRight .RoomNotices {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border: 1px solid black;
+        border-bottom: 0;
+    }
 }
 
-.FLyre-Chat-Main .RoomUsers {
-    position: absolute;
-    top: 0;
-    bottom:0;
-    width: 20%;
-    right: 0;
-    border: 1px solid black;
-    border-right: 0;
-}
 
 .FLyre-Chat-Footer > .InnerContainer {
     position: absolute;
@@ -84,7 +128,7 @@
 .FLyre-Chat-TextInput > textarea {
     width: 100%;
     height: 64px;
-    margin: 0px;
+    margin: 0;
     font-family: Verdana,Arial,sans-serif;
     font-size: 12px;
     border: 1px solid #bdbdbd;
@@ -98,7 +142,7 @@
 
 .FLyre-Chat-Footer > .InnerContainer > .Avatar {
     position: absolute;
-    left:0;
+    left: 0;
     height: @ChatAvatarHeight;
     width: @ChatAvatarWidth;
 }
@@ -107,33 +151,37 @@
     position: absolute;
     height: @ChatAvatarHeight;
     width: @ChatAvatarWidth;
-    border:0;
-    margin:0;
-    right:0;
+    border: 0;
+    margin: 0;
+    right: 0;
 }
 
-.RoomBody .Message { 
+.RoomBody .Message {
     margin: 5px 0;
-    float:left;
+    float: left;
     width: 100%;
 }
 
-.RoomBody .Message .Message-Body { 
-    float:left;
+.RoomBody .Message .Message-Body {
+    float: left;
     width: 100%;
 }
 
 .RoomBody .Message .Content {
     float: left;
     width: 87%;
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
 }
 
 .RoomBody .User {
-    float:left;
+    float: left;
     width: 10%;
     text-align: right;
-    margin-right: 5px;
-    
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px dashed black;
+    overflow-x: hidden;
 }
 
 .RoomBody .User .Avatar {
@@ -147,3 +195,43 @@
     display: inline-block;
 }
 
+
+
+@media screen and (max-width: 767px) {
+    .FLyre-Chat-Main .RoomBody {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        overflow-y: auto;
+    }
+
+
+
+    .FLyre-Chat-Main .RoomRight {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 0;
+        border: 1px solid black;
+        border-right: 0;
+    }
+
+    .RoomUsers .RoomUser {
+        width: 16px;
+        margin: 2px;
+        float: left;
+    }
+
+    .RoomUser > .UserName {
+        display: none;
+    }
+
+    .RoomUsers .RoomUser .Avatar {
+        height: 24px;
+        width: 24px;
+    }
+}

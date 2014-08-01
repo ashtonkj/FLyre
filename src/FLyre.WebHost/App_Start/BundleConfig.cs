@@ -40,6 +40,7 @@ namespace FLyre.WebHost
 
             bundles.Add(new Bundle("~/bundles/Controllers").IncludeDirectory("~/Scripts/app/Controllers/", "*.js"));
             bundles.Add(new Bundle("~/bundles/Services").IncludeDirectory("~/Scripts/app/Services/", "*.js"));
+            bundles.Add(new Bundle("~/bundles/ViewModels").IncludeDirectory("~/Scripts/app/ViewModels/", "*.js"));
 
             bundles.Add(new StyleBundle("~/Content/cssbase").Include(
                       "~/Content/css/lib/bootstrap.css",

@@ -245,10 +245,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\Controllers\FLyre.Controllers.ChatRoomController.ts" />
     <TypeScriptCompile Include="Scripts\app\Controllers\FLyre.Controllers.NavigationController.ts" />
     <TypeScriptCompile Include="Scripts\app\FLyre.Routes.ts" />
     <TypeScriptCompile Include="Scripts\app\FLyre.ts" />
     <TypeScriptCompile Include="Scripts\app\Services\FLyre.Services.PresentationService.ts" />
+    <TypeScriptCompile Include="Scripts\app\ViewModels\FLyre.ViewModels.ChatRoom.ts" />
+    <TypeScriptCompile Include="Scripts\app\ViewModels\FLyre.ViewModels.UserSummary.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -258,6 +261,7 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\signalr\signalr.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

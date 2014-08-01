@@ -8,7 +8,7 @@
     //controller: 'HomeController'
   });
   $routeProvider.when('/Chat', {
-    templateUrl: '/Chat'//,
-    //controller: 'HomeController'
+    templateUrl: '/Chat',
+    controller: 'ChatRoomController'
   });
 }

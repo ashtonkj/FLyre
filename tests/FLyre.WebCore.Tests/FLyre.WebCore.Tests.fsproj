@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Tests.fs" />
     <None Include="packages.config" />
+    <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -76,8 +77,6 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\src\FLyre.WebCore\FLyre.WebCore.fsproj">
       <Name>FLyre.WebCore</Name>
       <Project>{f0a18127-2360-4832-866e-e7cdf8962b6c}</Project>
